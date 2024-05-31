@@ -1,0 +1,148 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Link from "../components/ui/link.astro";
+import Icon from "../components/ui/Icon.astro";
+---
+
+<BaseLayout title="About | Wyatt Howlett" description="About Wyatt Howlett">
+  <div class="stack gap-20">
+    <header class="wrapper hero">
+      <Hero align="center" title="About Me ( );" tagline="Full Stack Web Developer" />
+      
+      <div class="">
+      <img
+      class="rounded-md"
+      class="avatar-wrapper overlay rounded-md"
+        alt="illustration of profile page"
+        src="/assets/demo-img.jpg.png"
+      /></div>
+    </header>
+
+    <main class="wrapper about">
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            My name is Wyatt Howlett and I'm a FullStack Web Developer located
+            in Montreal with a passion for creating elegant, efficient, and
+            user-friendly websites and applications. I've been working as a
+            developer for 3 years, and during that time, I've had the pleasure
+            of working on a wide variety of projects for clients ranging from
+            small startups to large corporations as I have started my own
+            business Howltech Solutions in 2022. I specialize in Fullstack Web
+            Development and I'm always looking for new challenges that allow me
+            to apply my skills and learn new things. I'm always striving to take
+            on new projects that push me to grow and improve. In addition to my
+            technical skills, I believe that a well-rounded developer is not
+            only skilled in their craft, but also engaged with the world and the
+            people around them.
+          </p>
+          <p>
+            Besides programming, I'm also super enthusiastic about open-source
+            projects. I enjoy contributing to them because it allows me to give
+            back to the community, work with like-minded folks, and improve my
+            skills. Outside of the tech world, I have a hobby in photography. I
+            love capturing the beauty of the world through my lens and
+            preserving those special moments.
+          </p>
+          <p>
+            I'm truly thrilled to be on this journey of exploration and growth.
+            I'm always seeking new opportunities to expand my abilities and make
+            a positive impact through technology. Thanks for getting to know a
+            bit about me! 😊
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="content">
+          <p>
+            🎓 Plovdiv University "Paisii Hilendarski" (2022 - Present) in
+            Software technologies and design
+          </p>
+          <p>
+            🎓 St. St Cyril and Metodiy High School Asenovgrad (2017 - 2022)
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <p>JavaScript, TypeScript, React, NodeJS, GraphQL, SQL, C#</p>
+        </div>
+      </section>
+      <section>
+        <Link class="link" href="/projects" style="rounded">
+          <Icon icon="code" size="1.33em" /> See My Projects
+        </Link>
+      </section>
+    </main>
+  </div>
+</BaseLayout>
+
+<style lang="scss">
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 2.5rem;
+    gap: 1.5rem;
+
+    img {
+      width: 100%;
+      max-width: 22rem;
+    }
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+
+    .link {
+      justify-self: center;
+      align-self: center;
+      grid-column: 1 / -1;
+    }
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+
+    p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (min-width: 50em) {
+    .hero {
+      flex-direction: row;
+      gap: 6rem;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>
