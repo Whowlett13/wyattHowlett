@@ -7,16 +7,17 @@ import Icon from "../components/ui/Icon.astro";
 
 <BaseLayout title="About | Wyatt Howlett" description="About Wyatt Howlett">
   <div class="stack gap-20">
-    <header class="wrapper hero">
+    <header class="wrapper hero ">
       <Hero align="center" title="About Me ( );" tagline="Full Stack Web Developer" />
       
-      <div class="">
+      <div class="rounded-full avatar-wrapper ">
+        <div class="overlay">
       <img
-      class="rounded-md"
+      
       class="avatar-wrapper overlay rounded-md"
         alt="illustration of profile page"
         src="/assets/demo-img.jpg.png"
-      /></div>
+      /></div></div>
     </header>
 
     <main class="wrapper about">
@@ -81,6 +82,7 @@ import Icon from "../components/ui/Icon.astro";
     img {
       width: 100%;
       max-width: 22rem;
+      border-radius: 10%;
     }
   }
 
