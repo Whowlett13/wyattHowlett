@@ -5,22 +5,34 @@ import Icon from "../components/ui/Icon.astro";
 import Hero from "../components/Hero.astro";
 import RepoCard from "../components/RepoCard.astro";
 
-type PinnedRepos = {
-  owner: string;
-  repo: string;
-  link: string;
-  description: string;
-  image: string;
-  language: string;
-  languageColor: string;
-  stars: number;
-  forks: number;
-};
 
-const pinnedRepos = await fetch(
-  "https://gh-pinned-repos-tsj7ta5xfhep.deno.dev/?username=whowlett13"
-);
-const repos = await pinnedRepos.json();
+
+
+
+
+
+
+
+// Local JSON data with images and descriptions
+// const localProjects = [
+//   {
+//   name: "One Track Productions",
+//   description:"One Track Productions is a vibrant and dynamic company dedicated to curating unforgettable musical experiences that transcend boundaries and elevate the spirit. Since our inception in 2023, we have been at the forefront of the live music industry, orchestrating events that resonate with music enthusiasts worldwide.",
+//   image: "/content/images/OneTrackPro.png",
+// },
+// ];
+
+// function displayLocalProjects(projects) {
+//   return projects.map((project) => {
+//     return (
+//       <div class="project">
+//         <img src={project.image} alt={project.name} />
+//         <h3>{project.name}</h3>
+//         <p>{project.description}</p>
+//       </div>
+//     );
+//   });
+// }
 ---
 
 <BaseLayout
@@ -42,9 +54,14 @@ const repos = await pinnedRepos.json();
 
     <main class="wrapper stack gap-10">
       <div class="repos">
-        {repos.map((repo: PinnedRepos) => <RepoCard {...repo} />)}
+        
+          <RepoCard
+            
+          />
+        
+       
       </div>
-
+      
       <div class="links">
         <Link
           class="link"

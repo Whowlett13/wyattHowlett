@@ -1,16 +1,27 @@
 ---
 import Icon from "./ui/Icon.astro";
+import Dylan from "../content/images/dylanDrones.png";
+import OneTrack from "../content/images/OneTrackPro.png";
+import Portabella from "../content/images/Portabella Screenshot.png";
+import Company from "../content/images/HowltechSolutions.jpg";
+import Embers from "../content/images//EmbersScreenShot.png";
+import VoltWheels from "../content/images/voltwheels.png";
+import lofi from "../content/images/codeQuiz.png";
+import Weather from "../content/images/Weather.png";
+import Work from "../content/images/Work Day Scheduler.png";
+import TextE from "../content/images/taskBusters.png";
 
 const { repo, link, description, language, languageColor } = Astro.props;
+
 ---
 
-<a class="repo-card" href={link} title="View repo" target="_blank">
+<a class="repo-card" href="https://www.onetrackpro.ca/" title="View repo" target="_blank">
   <div class="repo-card__header">
-    <h3 class="repo-card__title">{repo}</h3>
+    <h3 class="repo-card__title">One Track Productions</h3>
     <Icon icon="github-logo" color="var(--gray-200)" size="2.5em" />
   </div>
   <p class="repo-card__description">
-    {description}
+    "ne Track Productions is a vibrant and dynamic company dedicated to curating unforgettable musical experiences that transcend boundaries and elevate the spirit. Since our inception in 2023, we have been at the forefront of the live music industry, orchestrating events that resonate with music enthusiasts worldwide.
   </p>
   <div class="repo-card__footer">
     <span
@@ -21,8 +32,14 @@ const { repo, link, description, language, languageColor } = Astro.props;
     <span class="repo-card__footer-language">{language}</span>
   </div>
 </a>
-
 <style lang="scss">
+  .gitHub{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 100px;
+  }
+
   .repo-card {
     display: block;
     text-decoration: none;
@@ -44,13 +61,20 @@ const { repo, link, description, language, languageColor } = Astro.props;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding-bottom: 10px;
     }
 
     &__title {
+      align-items: center;
+      justify-content: center;
       font-size: var(--text-xl);
+      padding-bottom: 50px;
     }
 
     &__description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0.8rem 0;
       color: var(--gray-200);
 
