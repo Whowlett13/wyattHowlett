@@ -7,11 +7,12 @@ import Icon from "../components/ui/Icon.astro";
 
 <BaseLayout title="About | Wyatt Howlett" description="About Wyatt Howlett">
   <div class="stack gap-20">
-    <header class="wrapper hero">
+    <header class="wrapper hero ">
       <Hero
         align="center"
         title="About Me ( );"
         tagline="Full Stack Web Developer"
+        
       />
 
       <div class="rounded-full avatar-wrapper">
@@ -29,7 +30,7 @@ import Icon from "../components/ui/Icon.astro";
       <section>
         <h2 class="section-title">Background:</h2>
         <div class="content">
-          <p class="text-center">
+          <p>
             My name is Wyatt Howlett and I'm a FullStack Web Developer located
             in Montreal with a passion for creating elegant, efficient, and
             user-friendly websites and applications. I've been working as a
@@ -55,7 +56,7 @@ import Icon from "../components/ui/Icon.astro";
       </section>
       <section>
         <h2 class="section-title">Skills:</h2>
-        <div class="content text-center">
+        <div class="content">
           <p>
             HTML, CSS, JavaScript, TypeScript, React, NodeJS, GraphQL, SQL,
             RegEx, MongoDb, Bootstrap, TailWind, Wordpress & AstroJS.
@@ -316,7 +317,7 @@ import Icon from "../components/ui/Icon.astro";
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    color: var(--gray-200);
+    color: var(--gray-999-basis);
 
     .link {
       justify-self: center;
@@ -328,7 +329,7 @@ import Icon from "../components/ui/Icon.astro";
   .section-title {
     grid-column-start: 1;
     font-size: var(--text-xl);
-    color: var(--gray-0);
+    color: var(--gray-999-basis);
   }
 
   .content {
