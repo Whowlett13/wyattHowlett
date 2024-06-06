@@ -29,11 +29,19 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 ---
 
 <aside>
-  <div class="contact-info stack gap-4">
-    <h2 class="contact-info__heading">Want to get in touch?</h2>
-    <p class="contact-info__description">
+  <div class="contact-info stack gap-4 text-center">
+    <h2 class="contact-info__heading text-center">Want to get in touch?</h2><div class="socials">
+      {
+        iconLinks.map(({ href, icon, label }) => (
+          <a href={href} class="social pt-10" target="_blank" title={label}>
+            <Icon icon={icon} />
+          </a>
+        ))
+      }
+    </div>
+    <p class="contact-info__description text-center pt-10">
       Find me across various social media platforms. Feel free to reach out
-      through any of these channels. Let's chat and bring your ideas to life!
+      through any of these channels. Lets Your Ideas Into An Interactive Product !
     </p>
   </div>
   <div>
@@ -41,16 +49,8 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       Send a message
       <Icon icon="message" size="1.2em" />
     </ContactForm>
-    <span>OR</span>
-    <div class="socials">
-      {
-        iconLinks.map(({ href, icon, label }) => (
-          <a href={href} class="social" target="_blank" title={label}>
-            <Icon icon={icon} />
-          </a>
-        ))
-      }
-    </div>
+    
+    
   </div>
 </aside>
 
