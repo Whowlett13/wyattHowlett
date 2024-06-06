@@ -1,5 +1,5 @@
 ---
-import CallToAction from "./CallToAction.astro";
+import ContactForm from './ContactForm.astro';
 import Icon, { Props as IconProps } from "./ui/Icon.astro";
 
 const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
@@ -37,10 +37,10 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
     </p>
   </div>
   <div>
-    <CallToAction href="mailto:howltechsolutions@gmail.com">
+    <ContactForm href="mailto:howltechsolutions@gmail.com">
       Send a message
       <Icon icon="message" size="1.2em" />
-    </CallToAction>
+    </ContactForm>
     <span>OR</span>
     <div class="socials">
       {

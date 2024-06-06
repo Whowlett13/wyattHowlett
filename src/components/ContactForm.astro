@@ -1,0 +1,59 @@
+---
+
+---
+
+<div
+  class="flex justify-center text-primary text-1xl font-bold sm:text-2xl px-4 mb-20"
+>
+  <h1 class="text-center">Contact Me</h1>
+</div>
+<section class="w-5/6 rounded-xl mx-auto bg-fit">
+  <div
+    class="flex-col md:flex-row items-center gap-x-8 gap-y-4 w-full justify-center"
+  >
+    <form method="POST">
+      <div class="py-5">
+        <label class="text-primary font-semibold py-10">
+          First Name:
+          <input
+            type="text"
+            name="firstName:"
+            class="w-full text-black rounded-md h-10 px-2"
+            required
+          />
+        </label>
+        <div class="py-5">
+          <label class="text-primary font-semibold">
+            Last Name:
+            <input
+              type="text"
+              name="lastName:"
+              class="w-full text-black rounded-md h-10 px-2"
+              required
+            />
+          </label>
+        </div>
+      </div>
+      <div class="py-5">
+        <label class="text-primary font-semibold">
+          Email Address:
+          <input
+            type="email"
+            name="email"
+            class="w-full text-black rounded-md h-10 px-2"
+            required
+          />
+        </label>
+      </div>
+      <div>
+        <label class="text-primary font-semibold">
+          Message:
+          <textarea name="message" class="w-full text-black rounded-md h-28 p-2"
+          ></textarea>
+        </label>
+      </div>
+      <div class="text-center"> <button>Submit</button></div>
+    </form>
+   
+  </div>
+</section>
