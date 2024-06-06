@@ -18,7 +18,10 @@ const { repo, link, description, language, languageColor } = Astro.props;
 <a class="repo-card" href="https://www.onetrackpro.ca/" title="View repo" target="_blank">
   <div class="repo-card__header">
     <h3 class="repo-card__title">One Track Productions</h3>
-    <Icon icon="github-logo" color="var(--gray-200)" size="2.5em" />
+    <Icon icon="codeblock" color="var(--gray-200)" size="2.5em" />
+  </div>
+  <div class="imgContainer">
+    <img src={OneTrack.src} alt="One Track Productions" />
   </div>
   <p class="repo-card__description">
     One Track Productions is a vibrant and dynamic company dedicated to curating unforgettable musical experiences that transcend boundaries and elevate the spirit. Since our inception in 2023, we have been at the forefront of the live music industry, orchestrating events that resonate with music enthusiasts worldwide.
@@ -33,6 +36,18 @@ const { repo, link, description, language, languageColor } = Astro.props;
   </div>
 </a>
 <style lang="scss">
+  .imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+  
+  }
+  .imgContainer img{
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+  }
   .gitHub{
     display: flex;
     justify-content: flex-end;
